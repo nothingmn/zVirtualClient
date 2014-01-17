@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{947EE0F5-F98F-4D37-A87E-28DB96DB97A3}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zVirtualAndroidConnect</RootNamespace>
+    <AssemblyName>zVirtualAndroidConnect</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\zVirtual.Connect\Client\ClientManager.cs">
+      <Link>Client\ClientManager.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Datum.cs">
+      <Link>Client\Datum.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\DefaultClient.cs">
+      <Link>Client\DefaultClient.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Device.cs">
+      <Link>Client\Device.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\DeviceCommandsResult.cs">
+      <Link>Client\DeviceCommandsResult.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\DeviceResult.cs">
+      <Link>Client\DeviceResult.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Devicesettingvalues.cs">
+      <Link>Client\Devicesettingvalues.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Devicetypesettingvalues.cs">
+      <Link>Client\Devicetypesettingvalues.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Groups.cs">
+      <Link>Client\Groups.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Options.cs">
+      <Link>Client\Options.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\PostDeviceCommandResult.cs">
+      <Link>Client\PostDeviceCommandResult.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Storedcommands.cs">
+      <Link>Client\Storedcommands.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Type.cs">
+      <Link>Client\Type.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Client\Values.cs">
+      <Link>Client\Values.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Contracts\ILog.cs">
+      <Link>Contracts\ILog.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Contracts\IWebApiClient.cs">
+      <Link>Contracts\IWebApiClient.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Logging\AndroidLogger.cs">
+      <Link>Logging\AndroidLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Logging\ConsoleLogger.cs">
+      <Link>Logging\ConsoleLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Logging\LogManager.cs">
+      <Link>Logging\LogManager.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Logging\StoreLogger.cs">
+      <Link>Logging\StoreLogger.cs</Link>
+    </Compile>
+    <Compile Include="..\zVirtual.Connect\Logging\WindowsPhoneLogger.cs">
+      <Link>Logging\WindowsPhoneLogger.cs</Link>
+    </Compile>
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="df07bd17-32d6-4025-a9cf-5806ca5e800e" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
